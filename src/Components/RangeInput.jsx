@@ -10,7 +10,7 @@ class RangeInput extends Component {
     }
     render() {
         return (
-            <div className='input-range'>
+            <div className='input-range container'>
                 <input type='range' onChange={this.onChange} value={this.state.value}></input>
                 <input type='text' placeholder={this.state.value}></input>
             </div>

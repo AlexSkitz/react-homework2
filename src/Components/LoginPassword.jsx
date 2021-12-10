@@ -24,7 +24,7 @@ class LoginPassword extends Component {
     render() {
         return (
             <Fragment>
-                <div className='form-container'>
+                <div className='container'>
                     <form className='form' id='logInForm' onSubmit={event => this.onSubmit(event)}>
                         <div className='username'>
                             <label htmlFor='login'>

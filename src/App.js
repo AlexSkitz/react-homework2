@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import './App.css';
 import RangeInput from './Components/RangeInput.jsx';
 import LoginPassword from './Components/LoginPassword.jsx'
+import Films from './Components/Films.jsx'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <Fragment>
         <RangeInput />
         <LoginPassword />
+        <Films />
       </Fragment>
     );
   }
