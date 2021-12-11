@@ -1,17 +1,23 @@
 import React, { Fragment, Component } from 'react';
 import './App.css';
-import RangeInput from './Components/RangeInput.jsx';
-import LoginPassword from './Components/LoginPassword.jsx'
-import Films from './Components/Films.jsx'
+import RangeInput from './Pages/RangeInput.jsx';
+import LoginPassword from './Pages/LoginPassword.jsx'
+import Films from './Pages/Films.jsx'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Header from './Components/Header';
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <RangeInput />
-        <LoginPassword />
-        <Films />
-      </Fragment>
+      <>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Navigate to='/input' />} />
+          <Route path='/input' element={<RangeInput />} />
+          <Route path='/login' element={<LoginPassword />} />
+          <Route path='/films' element={<Films />} />
+        </Routes>
+      </>
     );
   }
 };
